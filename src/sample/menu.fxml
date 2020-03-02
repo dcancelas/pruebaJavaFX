@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Menu">
+   <children>
+      <Button fx:id="boton1" layoutX="66.0" layoutY="91.0" mnemonicParsing="false" onAction="#boton1" prefHeight="37.0" prefWidth="119.0" text="Sol y Tierra" />
+      <Button fx:id="boton2" layoutX="66.0" layoutY="137.0" mnemonicParsing="false" onAction="#boton2" prefHeight="37.0" prefWidth="119.0" text="Test teclado" />
+      <Text layoutX="26.0" layoutY="63.0" text="Selecciona una opción" textAlignment="CENTER" wrappingWidth="197.37109375">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

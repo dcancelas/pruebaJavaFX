@@ -25,16 +25,16 @@ public class TestTeclado {
         ArrayList<String> input = new ArrayList<>();
 
         escena.setOnKeyPressed(
-                e -> {
-                    String code = e.getCode().toString();
-                    if ( !input.contains(code) )
-                        input.add( code );
+                event -> {
+                    String code = event.getCode().toString();
+                    if (!input.contains(code))
+                        input.add(code);
                 });
 
         escena.setOnKeyReleased(
-                e -> {
-                    String code = e.getCode().toString();
-                    input.remove( code );
+                event -> {
+                    String code = event.getCode().toString();
+                    input.remove(code);
                 });
 
         GraphicsContext gc = canvas.getGraphicsContext2D();

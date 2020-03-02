@@ -8,7 +8,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class Espacio {
+public class SolTierra {
 
     public static Stage start(Stage primaryStage) {
         primaryStage.setTitle("Prueba JavaFX");
