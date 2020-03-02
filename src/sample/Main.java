@@ -7,6 +7,9 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -20,42 +23,29 @@ public class Main extends Application {
         primaryStage.setTitle("Prueba JavaFX");
 
         Group root = new Group();
-        primaryStage.setScene(new Scene(root));
+        Scene escena = new Scene(root);
+        primaryStage.setScene(escena);
 
-        Canvas canvas = new Canvas(512, 512);
+        Canvas canvas = new Canvas(220, 200);
         root.getChildren().add(canvas);
 
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
-        Image tierra = new Image("file:images/earth.png");
-        Image espacio = new Image("file:images/space.png");
-        Image sol = new Image("file:images/sun.png");
+        Image boton1 = new Image("file:images/ui/blue_button00.png");
 
-        AnimatedImage ovni = new AnimatedImage();
-        Image[] imageArray = new Image[6];
-        for (int i = 0; i < imageArray.length; i++)
-            imageArray[i] = new Image("file:images/ufo/ufo_"+i+".png");
-        ovni.frames = imageArray;
-        ovni.duration = 0.1;
-
-        final long startNanoTime = System.nanoTime();
+        Font fuente = Font.font( "Times New Roman", FontWeight.BOLD, 15 );
+        gc.setFont(fuente);
+        gc.fillText("Selecciona una opción", 15, 50 );
 
         new AnimationTimer() {
             public void handle(long currentNanoTime) {
-                double t = (currentNanoTime - startNanoTime) / 1000000000.0;
-
-                double x = 232 + 180 * Math.cos(t);
-                double y = 232 + 180 * Math.sin(t);
-                double xOvni = x + 50 * Math.sin(t);
-                double yOvni = y + 50 * Math.cos(t);
-
-                gc.drawImage(espacio, 0 , 0);
-                gc.drawImage(sol, 196, 196);
-                gc.drawImage(tierra, x, y);
-                gc.drawImage(ovni.getFrame(t), xOvni, yOvni);
+                gc.drawImage(boton1, 15, 75);
+                gc.drawImage(boton1, 15, 135);
             }
         }.start();
 
         primaryStage.show();
+        //Espacio.start(new Stage()).show();
+        //TestTeclado.start(new Stage()).show();
     }
 }
