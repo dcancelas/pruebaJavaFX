@@ -8,7 +8,7 @@
    <children>
       <Button fx:id="boton1" layoutX="66.0" layoutY="91.0" mnemonicParsing="false" onAction="#boton1" prefHeight="37.0" prefWidth="119.0" text="Sol y Tierra" />
       <Button fx:id="boton2" layoutX="66.0" layoutY="137.0" mnemonicParsing="false" onAction="#boton2" prefHeight="37.0" prefWidth="119.0" text="Test teclado" />
-      <Text layoutX="26.0" layoutY="63.0" text="Selecciona una opción" textAlignment="CENTER" wrappingWidth="197.37109375">
+      <Text layoutX="12.0" layoutY="58.0" text="Selecciona una opción" textAlignment="CENTER" wrappingWidth="227.37109375">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
